@@ -1,8 +1,8 @@
 # Docscan
 
-[![Downloads](https://pepy.tech/badge/docscan)](https://pepy.tech/project/docscan)
-[![Downloads](https://pepy.tech/badge/docscan/month)](https://pepy.tech/project/docscan/month)
-[![Downloads](https://pepy.tech/badge/docscan/week)](https://pepy.tech/project/docscan/week)
+[![Downloads](https://pepy.tech/badge/docscan1)](https://pepy.tech/project/docscan)
+[![Downloads](https://pepy.tech/badge/docscan1/month)](https://pepy.tech/project/docscan/month)
+[![Downloads](https://pepy.tech/badge/docscan1/week)](https://pepy.tech/project/docscan/week)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://img.shields.io/badge/License-MIT-blue.svg)
 
 Docscan is a document scanner. Take a photo of your documents and frame it.
