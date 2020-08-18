@@ -5,6 +5,7 @@
 [![Downloads](https://pepy.tech/badge/docscan/week)](https://pepy.tech/project/docscan/week)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://img.shields.io/badge/License-MIT-blue.svg)
 
+
 Docscan is a document scanner. Take a photo of your documents and frame it.
 
 <p style="display: flex;align-items: center;justify-content: center;">
