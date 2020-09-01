@@ -1,4 +1,4 @@
-rembg==1.0.7
+rembg==1.0.9
 opencv-python==4.4.0.42
 imutils==0.5.3
 numpy==1.19.1
