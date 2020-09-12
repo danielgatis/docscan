@@ -11,14 +11,30 @@ from ..doc import scan
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    url = request.args.get("url", type=str)
-    if url is None:
-        return {"error": "missing query param 'url'"}, 400
+    file_content = ''
+
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            return {"error": "missing post form param 'file'"}, 400
+
+        file_content = request.files['file'].read();
+
+    if request.method == 'GET':
+        url = request.args.get("url", type=str)
+        if url is None:
+            return {"error": "missing query param 'url'"}, 400
+
+        file_content = urlopen(unquote_plus(url)).read();
+
+    if file_content == '':
+        return {"error": "File content is empty"}, 400
 
     try:
         return send_file(
-            BytesIO(scan(urlopen(unquote_plus(url)).read())), mimetype="image/png",
+            BytesIO(scan(file_content)),
+            mimetype="image/png",
         )
     except Exception as e:
         app.logger.exception(e, exc_info=True)
