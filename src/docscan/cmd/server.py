@@ -53,7 +53,6 @@ def main():
     )
 
     args = ap.parse_args()
-    app.add_url_rule("/", "index", index)
     serve(app, host=args.addr, port=args.port)
 
 
