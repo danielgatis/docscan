@@ -11,24 +11,24 @@ from ..doc import scan
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route("/", methods=["GET", "POST"])
 def index():
-    file_content = ''
+    file_content = ""
 
-    if request.method == 'POST':
-        if 'file' not in request.files:
+    if request.method == "POST":
+        if "file" not in request.files:
             return {"error": "missing post form param 'file'"}, 400
 
-        file_content = request.files['file'].read();
+        file_content = request.files["file"].read()
 
-    if request.method == 'GET':
+    if request.method == "GET":
         url = request.args.get("url", type=str)
         if url is None:
             return {"error": "missing query param 'url'"}, 400
 
-        file_content = urlopen(unquote_plus(url)).read();
+        file_content = urlopen(unquote_plus(url)).read()
 
-    if file_content == '':
+    if file_content == "":
         return {"error": "File content is empty"}, 400
 
     try:
@@ -45,11 +45,19 @@ def main():
     ap = argparse.ArgumentParser()
 
     ap.add_argument(
-        "-a", "--addr", default="0.0.0.0", type=str, help="The IP address to bind to.",
+        "-a",
+        "--addr",
+        default="0.0.0.0",
+        type=str,
+        help="The IP address to bind to.",
     )
 
     ap.add_argument(
-        "-p", "--port", default=5000, type=int, help="The port to bind to.",
+        "-p",
+        "--port",
+        default=5000,
+        type=int,
+        help="The port to bind to.",
     )
 
     args = ap.parse_args()

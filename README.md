@@ -44,32 +44,7 @@ Scan from a remote image
 
 Scan from a local file
 ```bash
-    docscan -o path/to/output.png path/to/input.png
-```
-
-Scan from all images in a folder
-```bash
-    docscan -p path/to/inputs
-```
-
-### Usage as a server
-
-Start the server
-```bash
-    docscan-server
-```
-
-Open your browser to
-```
-    http://localhost:5000?url=http://image.png
-```
-
-Also you can send the file as a FormData (multipart/form-data):
-```
-    <form action="http://localhost:5000" method="post" enctype="multipart/form-data">
-       <input type="file" name="file"/>
-       <input type="submi"t value="upload"/>
-    </form>
+    docscan path/to/output.png path/to/input.png
 ```
 
 ### Usage as a library
