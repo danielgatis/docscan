@@ -11,7 +11,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="docscan",
-    version="1.0.5",
+    version="1.0.6",
     description="This is a document scanner",
     long_description=long_description,
     long_description_content_type="text/markdown",

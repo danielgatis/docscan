@@ -19,7 +19,7 @@ from ..doc import scan
     type=click.File("wb", lazy=True),
 )
 def main(input, output):
-    output.write(rembg.remove(input.read()))
+    output.write(scan(rembg.remove(input.read())))
 
 
 if __name__ == "__main__":
